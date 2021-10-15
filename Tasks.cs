@@ -20,8 +20,20 @@ namespace testPetrov
         public static void Ex2()
         {
             int[] nums = { 1, 6, 4, 3, 7, 4, 9, 9, 7, 6 };
-            int[] numsOdd = new int[6];
-            int[] numsEven = new int[4];
+            int len1 = 0, len2 = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    len1 += 1;
+                }
+                else
+                {
+                    len2 += 1;
+                }
+            }
+            int[] numsOdd = new int[len1];
+            int[] numsEven = new int[len2];
             int k = 0, j = 0;
             for (int i = 0; i < nums.Length; i++)
             {
@@ -72,6 +84,10 @@ namespace testPetrov
                 Console.WriteLine("Sinu number on õnnelik");
             }
             else { Console.WriteLine("Sinu number ei ole õnnelik"); }
+        }
+        public static void ex4()
+        {
+
         }
     }
 }
