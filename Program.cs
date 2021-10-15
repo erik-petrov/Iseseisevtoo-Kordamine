@@ -12,11 +12,11 @@ namespace testPetrov
         {
             /*2. Variant
 
-            Ü 1. В заданной строке текста определите количество слов. Каждое слово отделено друг от друга пробелом. Посчитать кол-во слов и пробелов в тексте.
+           Ü 1. Määrake antud tekstireal sõnade arv. Iga sõna on üksteisest eraldatud tühikuga. Loendage tekstis olevate sõnade ja tühikute arv.
 
-            Ü 2. Задан одномерный массив целых чисел. Образуйте из него два отсортированных по возрастанию массива, содержащих четные и нечетные числа. Подсказка: четное число делится на 2 без остатка.
+           Ü 2. Esitatakse ühemõõtmeline täisarvude massiiv. Vormi sellest kaks massiivi, mis on sorteeritud kasvavas järjekorras ja sisaldavad paaris- ja paarituid numbreid. Vihje: paarisarv jagub ilma jäägita 2 -ga.
 
-            Ü 3. Дано M'значное число. Создать массив из его цифр. Определить, является ли исходное число счастливым?*/
+           Ü 3. Esitatakse M'-kohaline number. Loo massiiv selle numbrite hulgast. Tehke kindlaks, kas algne number on õnnelik?*/
             Tasks.Ex1();
             Tasks.Ex2();
             Tasks.Ex3();
