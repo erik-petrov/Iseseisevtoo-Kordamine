@@ -32,8 +32,8 @@ namespace testPetrov
                     len2 += 1;
                 }
             }
-            int[] numsOdd = new int[len1];
-            int[] numsEven = new int[len2];
+            int[] numsOdd = new int[len2+1];
+            int[] numsEven = new int[len1+1];
             int k = 0, j = 0;
             for (int i = 0; i < nums.Length; i++)
             {
