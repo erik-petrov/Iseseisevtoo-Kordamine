@@ -19,42 +19,55 @@ namespace testPetrov
 
         public static void Ex2()
         {
-            int[] nums = {1,5,4,6,45,6,546,45,64,56,456,4,564,56,4,2,45,43,45,2,64,575,67};
-            List<int> numsOdd = new List<int>();
-            List<int> numsEven = new List<int>();
+            int[] nums = { 1, 6, 4, 3, 7, 4, 9, 9, 7, 6 };
+            int[] numsOdd = new int[6];
+            int[] numsEven = new int[4];
+            int k = 0, j = 0;
             for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] % 2 == 0)
                 {
-                    numsEven.Add(nums[i]);
-                } else
+                    numsEven[k] = nums[i];
+                    k += 1;
+                }
+                else
                 {
-                    numsOdd.Add(nums[i]);
+                    numsOdd[j] = nums[i];
+                    j += 1;
                 }
             }
-            int[] numsOddAr = numsOdd.ToArray();
-            int[] numsEvenAr = numsEven.ToArray();
-            Array.Sort(numsOddAr);
-            Array.Sort(numsEvenAr);
-            foreach (var item in numsOddAr)
+            Array.Sort(numsOdd);
+            Array.Sort(numsEven);
+            foreach (var item in numsOdd)
             {
-                Console.Write($"{item} ");
+                Console.Write(item);
             }
             Console.WriteLine();
-            foreach (var item in numsEvenAr)
+            foreach (var item in numsEven)
             {
-                Console.Write($"{item} ");
+                Console.Write(item);
             }
+            Console.WriteLine();
         } 
 
         public static void Ex3()
         {
             Random rnd = new Random();
             int num = rnd.Next(10, 99999999);
+            string t1 = "", t2 = "";
             Console.Write($"Teie number: {num}");
+            Console.WriteLine();
             //число в массив
             int[] result = num.ToString().Select(o => Convert.ToInt32(o) - 48).ToArray();
-            if (result.Length == 4)
+            int[] temp = new int[result.Length];
+            Array.Copy(result, temp, result.Length);
+            Array.Reverse(temp);
+            for (int i = 0; i < result.Length; i++)
+            {
+                t1 += result[i];
+                t2 += temp[i];
+            }
+            if (t1 == t2)
             {
                 Console.WriteLine("Sinu number on õnnelik");
             }
